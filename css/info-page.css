@@ -1,0 +1,52 @@
+.info-page {
+  margin-bottom: 10px;
+}
+
+.info-cover-image {
+  width: 100%;
+  height: 30vh;
+}
+
+.info-cover-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.info-container {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.info-container img {
+  width: 200px;
+  height: auto;
+  padding: 10px;
+}
+
+.info-details {
+  background: #2c2c2c;
+  color: #cbcbcb;
+  max-width: 900px;
+  padding: 10px;
+  margin: 5px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.description {
+  margin-bottom: 5px;
+}
+
+.statistics {
+  margin-top: 30px;
+}
+
+.statistics p {
+  padding: 5px;
+}

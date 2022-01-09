@@ -1,0 +1,45 @@
+@import "carousel.css";
+@import "anime-card.css";
+
+.container {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.anime-ranking-category {
+  color: #faa300;
+}
+
+.anime-view-all {
+  cursor: pointer;
+  color: #f1f1f1;
+  font-size: small;
+  padding: 3px;
+  margin-top: 5px;
+  background: rgb(61, 60, 60);
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.anime-cards {
+  padding: 10px;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 700px) {
+  .anime-cards {
+    padding: 3px;
+    justify-content: flex-start;
+  }
+}

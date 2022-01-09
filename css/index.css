@@ -1,0 +1,41 @@
+@import "home.css";
+@import "common.css";
+@import "info-page.css";
+@import "header.css";
+@import "footer.css";
+
+* {
+  font-family: "Montserrat", Arial;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+  background: #202125;
+}
+
+#currentPage {
+  min-height: 820px;
+}
+
+.skeleton {
+  opacity: 0.7;
+  animation: skeleton-loader 1s linear infinite alternate;
+}
+
+.image-skeleton {
+  opacity: 0.05;
+  mix-blend-mode: lighten;
+  background: #f0f3f5;
+}
+
+@keyframes skeleton-loader {
+  0% {
+    background-color: #a3b8c2;
+  }
+  100% {
+    background-color: #f0f3f5;
+  }
+}

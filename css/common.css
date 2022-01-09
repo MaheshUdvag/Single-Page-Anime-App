@@ -1,0 +1,27 @@
+.button {
+  padding: 8px;
+  font-size: large;
+  color: #f1f1f1;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.9); /* Black background with 0.5 opacity */
+  border-radius: 10px;
+}
+
+.button.small {
+  padding: 3px;
+  width: fit-content;
+  font-size: small;
+  color: #202125;
+  background: #faa300;
+  border-radius: 10px;
+}
+
+.button::after {
+  content: ">>";
+  margin: 5px;
+}
+
+.button:hover {
+  color: #f1f1f1;
+  background: rgb(61, 60, 60);
+}
