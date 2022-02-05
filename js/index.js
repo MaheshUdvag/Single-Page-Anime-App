@@ -68,7 +68,6 @@ const navigate = async (page) => {
   if (page === "home") {
     document.getElementById("currentPage").style["margin-top"] = "auto";
   } else {
-    console.log("asd");
     document.getElementById("currentPage").style["margin-top"] = "120px";
   }
   searchBar.hideSearchSuggestions();
