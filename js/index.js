@@ -95,6 +95,12 @@ document.body.addEventListener("click", function (e) {
     e.preventDefault();
     navigate(e.target.getAttribute("data-link"));
   }
+  if (
+    document.querySelector(".nav").classList.contains("responsive") &&
+    e.target.id !== "responsive-menu"
+  ) {
+    document.querySelector(".nav").classList.remove("responsive");
+  }
 });
 
 document.querySelector("#responsive-menu").addEventListener("click", () => {
