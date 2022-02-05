@@ -1,5 +1,5 @@
-import AnimeCard from "../AnimeCard.js";
-import AnimeCards from "../AnimeContainer.js";
+import AnimeCard from "./AnimeCard.js";
+import AnimeCards from "./AnimeContainer.js";
 
 export default class CardsComponent {
   constructor(title, data, url) {
