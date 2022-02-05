@@ -3,10 +3,22 @@ export const getRecommendedAnime = async (limit, offset) => {
     `https://kitsu.io/api/edge/anime?filter[status]=current&sort=-averageRating&page[limit]=${limit}&page[offset]=${offset}&filter[subtype]=TV`
   );
   const { data } = await response.json();
+  let animeList = [];
+  if (data) {
+    for (let anime of data) {
+      if (
+        anime?.attributes?.ageRating !== "R" &&
+        anime?.attributes?.ageRating !== "R18"
+      )
+        animeList.push(anime);
+    }
+  }
 
-  if (!data) return;
+  if (!animeList) {
+    animeList = await getTrendingAnime(10, 0);
+  }
 
-  return data;
+  return animeList;
 };
 
 export const getAnimeSearchResults = async (term, limit) => {
