@@ -98,6 +98,14 @@ document.body.addEventListener("click", function (e) {
   }
 });
 
+document.querySelector("#responsive-menu").addEventListener("click", () => {
+  if (document.querySelector(".nav").classList.contains("responsive")) {
+    document.querySelector(".nav").classList.remove("responsive");
+  } else {
+    document.querySelector(".nav").classList.add("responsive");
+  }
+});
+
 // const a = document
 //   .createRange()
 //   .createContextualFragment(new InfoComponent(11).render());

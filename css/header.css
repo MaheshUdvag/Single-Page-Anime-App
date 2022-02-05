@@ -98,3 +98,52 @@ select {
 .search-term:hover {
   background: #8a8a8d;
 }
+
+.header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title .fa-bars {
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .nav {
+    background: #202125;
+    flex-direction: column;
+    position: absolute;
+    right: 5%;
+    top: 60px;
+    display: none;
+  }
+  .header {
+    padding: 10px;
+    width: 100%;
+    justify-content: flex-start;
+    height: auto;
+    flex-direction: column;
+  }
+  .nav-item {
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  #search-component {
+    width: 95%;
+  }
+
+  .header-title {
+    width: 95%;
+  }
+
+  .header-title .fa-bars {
+    display: block;
+  }
+
+  .responsive {
+    display: inherit;
+  }
+}
