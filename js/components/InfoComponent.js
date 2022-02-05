@@ -44,9 +44,11 @@ export default class InfoComponent {
             class="info-details"
             >
               <h2>${this.data.name}</h2>
-              <p class="description">
-              ${this.data.description}
-              </p>
+              ${
+                this.data.description
+                  ? `<p class="description">${this.data.description}</p>`
+                  : ""
+              }
               <div class="statistics">
                 <p><strong>Average Rating:</strong>  ${
                   this.data.averageRating ? this.data.averageRating : " -"
