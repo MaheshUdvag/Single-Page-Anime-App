@@ -7,7 +7,7 @@ export const getRecommendedAnime = async (limit, offset) => {
   }
 
   const response = await fetch(
-    `https://kitsu.io/api/edge/anime?filter[status]=current&sort=-averageRating&page[limit]=${limit}&page[offset]=${offset}&filter[subtype]=TV&filter[ageRating]=G&filter[ageRating]=PG&fields[anime]=titles,canonicalTitle,coverImage,posterImage`
+    `https://kitsu.io/api/edge/anime?filter[status]=current&sort=-averageRating&page[limit]=${limit}&page[offset]=${offset}&filter[subtype]=TV&filter[ageRating]=G&filter[ageRating]=PG`
   );
   const { data } = await response.json();
 
