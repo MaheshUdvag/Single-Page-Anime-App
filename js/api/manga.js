@@ -2,7 +2,7 @@ import { getDataFromCache, setDataToCache } from "../cache.js";
 
 export const getRecommendedManga = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getRecommendedManga");
+    const dataFromCache = await getDataFromCache(`getRecommendedManga${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -13,14 +13,14 @@ export const getRecommendedManga = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getRecommendedManga", data);
+  if (offset === 0) await setDataToCache(`getRecommendedManga${limit}`, data);
 
   return data;
 };
 
 export const getTrendingManga = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getTrendingManga");
+    const dataFromCache = await getDataFromCache(`getTrendingManga${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -31,14 +31,14 @@ export const getTrendingManga = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getTrendingManga", data);
+  if (offset === 0) await setDataToCache(`getTrendingManga${limit}`, data);
 
   return data;
 };
 
 export const getPopularManga = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getPopularManga");
+    const dataFromCache = await getDataFromCache(`getPopularManga${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -49,7 +49,7 @@ export const getPopularManga = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getPopularManga", data);
+  if (offset === 0) await setDataToCache(`getPopularManga${limit}`, data);
 
   return data;
 };
@@ -67,7 +67,7 @@ export const getMangaSearchResults = async (term, limit) => {
 
 export const getUpcomingManga = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getUpcomingManga");
+    const dataFromCache = await getDataFromCache(`getUpcomingManga${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -78,14 +78,14 @@ export const getUpcomingManga = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getUpcomingManga", data);
+  if (offset === 0) await setDataToCache(`getUpcomingManga${limit}`, data);
 
   return data;
 };
 
 export const getTopManga = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getTopManga");
+    const dataFromCache = await getDataFromCache(`getTopManga${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -96,7 +96,7 @@ export const getTopManga = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getTopManga", data);
+  if (offset === 0) await setDataToCache(`getTopManga${limit}`, data);
 
   return data;
 };

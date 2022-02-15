@@ -2,7 +2,7 @@ import { getDataFromCache, setDataToCache } from "../cache.js";
 
 export const getRecommendedAnime = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getRecommendedAnime");
+    const dataFromCache = await getDataFromCache(`getRecommendedAnime${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -13,7 +13,7 @@ export const getRecommendedAnime = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getRecommendedAnime", data);
+  if (offset === 0) await setDataToCache(`getRecommendedAnime${limit}`, data);
 
   return data;
 };
@@ -31,7 +31,7 @@ export const getAnimeSearchResults = async (term, limit) => {
 
 export const getTrendingAnime = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getTrendingAnime");
+    const dataFromCache = await getDataFromCache(`getTrendingAnime${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -42,14 +42,14 @@ export const getTrendingAnime = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getTrendingAnime", data);
+  if (offset === 0) await setDataToCache(`getTrendingAnime${limit}`, data);
 
   return data;
 };
 
 export const getPopularAnime = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getPopularAnime");
+    const dataFromCache = await getDataFromCache(`getPopularAnime${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -60,14 +60,14 @@ export const getPopularAnime = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getPopularAnime", data);
+  if (offset === 0) await setDataToCache(`getPopularAnime${limit}`, data);
 
   return data;
 };
 
 export const getUpcomingAnime = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getUpcomingAnime");
+    const dataFromCache = await getDataFromCache(`getUpcomingAnime${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -78,14 +78,14 @@ export const getUpcomingAnime = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getUpcomingAnime", data);
+  if (offset === 0) await setDataToCache(`getUpcomingAnime${limit}`, data);
 
   return data;
 };
 
 export const getTopAnime = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getTopAnime");
+    const dataFromCache = await getDataFromCache(`getTopAnime${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -96,14 +96,14 @@ export const getTopAnime = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getTopAnime", data);
+  if (offset === 0) await setDataToCache(`getTopAnime${limit}`, data);
 
   return data;
 };
 
 export const getAiringAnimeNow = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getAiringAnimeNow");
+    const dataFromCache = await getDataFromCache(`getAiringAnimeNow${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -114,7 +114,7 @@ export const getAiringAnimeNow = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getAiringAnimeNow", data);
+  if (offset === 0) await setDataToCache(`getAiringAnimeNow${limit}`, data);
 
   return data;
 };

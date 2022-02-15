@@ -2,7 +2,7 @@ import { getDataFromCache, setDataToCache } from "../cache.js";
 
 export const getCharacters = async (limit, offset) => {
   if (offset === 0) {
-    const dataFromCache = await getDataFromCache("getCharacters");
+    const dataFromCache = await getDataFromCache(`getCharacters${limit}`);
     if (dataFromCache) return dataFromCache;
   }
 
@@ -13,7 +13,7 @@ export const getCharacters = async (limit, offset) => {
 
   if (!data) return;
 
-  if (offset === 0) await setDataToCache("getCharacters", data);
+  if (offset === 0) await setDataToCache(`getCharacters${limit}`, data);
 
   return data;
 };
